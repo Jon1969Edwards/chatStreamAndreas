@@ -1,0 +1,202 @@
+{
+    "E- Pocket": {
+        "1": {
+            "id": 1,
+            "question": "Can the player log in the game"
+        },
+        "2": {
+            "id": 2,
+            "question": "does the player want to remove the Application"
+        },
+        "3": {
+            "id": 3,
+            "question": "is the recovery code available"
+        },
+        "4": {
+            "id": 4,
+            "question": "recommend a supportcase provide the supporcase link",
+            "nextindex": 5
+        },
+        "5": {
+            "id": 5,
+            "question": "request the supporcase information for the ticket",
+            "nextindex": 6
+        },
+        "6": {
+            "id": 6,
+            "question": "provide supportcase  help.",
+            "nextindex": 7
+        },
+        "7": {
+            "id": 7,
+            "question": "guide through the reset process",
+            "nextindex": 8
+        },
+        "8": {
+            "id": 8,
+            "question": "E-Pocket sucessfully removed ?"
+        },
+        "9": {
+            "id": 9,
+            "question": "ask if more help is needed."
+        },
+        "10": {
+            "id": 10,
+            "question": "appoloize, recommend to wait for supportanswer",
+            "nextindex": 11
+        },
+        "11": {
+            "id": 11,
+            "question": "finsih the chat friendly"
+        },
+        "1y": {
+            "id": "1y",
+            "type": "Problem",
+            "priority": "High",
+            "taskType": "Ma - Support",
+            "nextindex": 2
+        },
+        "1n": {
+            "id": "1n",
+            "type": "Question",
+            "priority": "Normal",
+            "taskType": "LS",
+            "nextindex": 2
+        },
+        "2y": {
+            "id": "2y",
+            "addTags": "login_epocket_remove",
+            "remTags": "new_ticket",
+            "nextindex": 4
+        },
+        "2n": {
+            "id": "2n",
+            "nextindex": 3
+        },
+        "3y": {
+            "id": "3y",
+            "nextindex": 7
+        },
+        "3n": {
+            "id": "3n",
+            "nextindex": 4
+        },
+        "8y": {
+            "id": "8y",
+            "addTags": "successful",
+            "nextindex": 9
+        },
+        "8n": {
+            "id": "8n",
+            "nextindex": 10
+        },
+        "9y": {
+            "id": "9y",
+            "nextindex": 10
+        },
+        "9n": {
+            "id": "9n",
+            "nextindex": 11
+        }
+    },
+    "E-Pocket 2": {
+        "1": {
+            "id": 1,
+            "question": "Can the player log in the game"
+        },
+        "2": {
+            "id": 2,
+            "question": "does the player want to remove the Application"
+        },
+        "3": {
+            "id": 3,
+            "question": "is the recovery code available"
+        },
+        "4": {
+            "id": 4,
+            "question": "recommend a supportcase provide the supporcase link",
+            "nextindex": 5
+        },
+        "5": {
+            "id": 5,
+            "question": "request the supporcase information for the ticket",
+            "nextindex": 6
+        },
+        "6": {
+            "id": 6,
+            "question": "provide supportcase  help.",
+            "nextindex": 7
+        },
+        "7": {
+            "id": 7,
+            "question": "guide through the reset process",
+            "nextindex": 8
+        },
+        "8": {
+            "id": 8,
+            "question": "E-Pocket sucessfully removed ?"
+        },
+        "9": {
+            "id": 9,
+            "question": "ask if more help is needed."
+        },
+        "10": {
+            "id": 10,
+            "question": "appoloize, recommend to wait for supportanswer",
+            "nextindex": 11
+        },
+        "11": {
+            "id": 11,
+            "question": "finsih the chat friendly"
+        },
+        "1y": {
+            "id": "1y",
+            "type": "Problem",
+            "priority": "High",
+            "taskType": "Ma - Support",
+            "nextindex": 2
+        },
+        "1n": {
+            "id": "1n",
+            "type": "Question",
+            "priority": "Normal",
+            "taskType": "LS",
+            "nextindex": 2
+        },
+        "2y": {
+            "id": "2y",
+            "addTags": "login_epocket_remove",
+            "remTags": "new_ticket",
+            "nextindex": 4
+        },
+        "2n": {
+            "id": "2n",
+            "nextindex": 3
+        },
+        "3y": {
+            "id": "3y",
+            "nextindex": 7
+        },
+        "3n": {
+            "id": "3n",
+            "nextindex": 4
+        },
+        "8y": {
+            "id": "8y",
+            "addTags": "successful",
+            "nextindex": 9
+        },
+        "8n": {
+            "id": "8n",
+            "nextindex": 10
+        },
+        "9y": {
+            "id": "9y",
+            "nextindex": 10
+        },
+        "9n": {
+            "id": "9n",
+            "nextindex": 11
+        }
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--   See Using Zendesk Garden:
+    https://developer.zendesk.com/apps/docs/developer-guide/setup#using-zendesk-garden
+    https://garden.zendesk.com/css-components/bedrock/
+    https://garden.zendesk.com/css-components/utilities/typography/
+   -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script>
+    // Initialise Apps framework client. See also:
+    // https://developer.zendesk.com/apps/docs/developer-guide/getting_started
+    var client = ZAFClient.init();
+    client.invoke('resize', { width: '320%', height: '180px' });
+  </script>
+  <div id="content"></div>
+  <div style="position:absolute;left:0px;top:90px;width:320px;border:1px #000000 solid;">
+  <div id="Route"></div> 
+ 
+   </div>
+   <script id="requester-template" type="text/x-handlebars-template">
+
+      <table>
+      <tr>
+        <td>Customer:</td>
+        <td class="data">{{name}}</td>
+      </tr>
+      <tr>
+        <td>Tags:</td>
+        <td class="data">{{#each tags}}{{this}} {{/each}}</td>
+      </tr>
+      <tr>
+        <td>Added:</td>
+        <td>{{created_at}}</td>
+      </tr>
+      <tr>
+        <td>Last signed in:</td>
+        <td class="data">{{last_login_at}}</td>
+      </tr>
+      </table>
+
+      </script>
+
+
+  <script id="error-template" type="text/x-handlebars-template">
+    <p>{{status}} - {{statusText}} error. Please report a bug at the link below.</p>
+  </script>
+   
+   <script id="choice-template" type="text/x-handlebars-template">
+   <div style="position:absolute;left:0px;top:40px;border:1px #000000 solid;">
+   <select name="Combobox1" size="1" id="Combobox1" onchange="showActive(value);return false;"style="left:0px;top:27px;width:100%;height:100%;border-width:0px;font-family:Courier New;font-size:13px;">
+   <option value="Case">Case</option>
+   <option value="Economy">Economy</option>
+   <option value="Ticket-ETA">Ticket-ETA</option>
+   <option value="BugReport">BugReport</option>
+   </select>
+   </div>
+   <div style="position:absolute;left:0px;top:15px;">
+   <p>Kind of?</p>
+   </div>
+   </script>
+   
+    <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.3.3/dist/handlebars.min.js"></script>  
+    <script src="script.js"></script>
+  	</html>
+  	
+    <script id="activestream-template" type="text/x-handlebars-template">
+   <div style="position:absolute;left:0px;top:15px;">
+    <p>{{Question}}</p>
+   </div>
+
+   <input class="btn" type="button" id="Button2" onclick="showActive(value);return false;" name="Yes" value=Yes style="position:absolute;left:0px;top:60px;width:96px;height:25px;border:1px #000000 solid;background-color:#FFFFFF;font-family:Arial;font-size:13px;">
+   <input class="btn" type="button" id="Button3" onclick="showActive(value);return false;" name="No" value="No" style="position:absolute;left:100px;top:60px;width:96px;height:25px;border:1px #000000 solid;background-color:#FFFFFF;font-family:Arial;font-size:13px;">
+   <input class="btn" type="button" id="Button4" onclick="showActive(value);return false;" name="continue" value="Continue" style="position:absolute;left:200px;top:60px;width:96px;height:25px;border:1px #000000 solid;background-color:#FFFFFF;font-family:Arial;font-size:13px;">
+	</script>
+	
+	<script id="bugreport-template" type="text/x-handlebars-template">
+	  <textarea name="TextArea1" 
+              id="TextArea1" 
+              style="position:absolute;left:1px;top:57px;width:298px;height:65px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:0" 
+              rows="3" 
+              cols="33" 
+              title="A short summary of the issue">
+    </textarea>
+	    <div id="wb_Text1" 
+           style="position:absolute;left:0px;top:36px;width:220px;height:18px;z-index:1;" align="left">
+        <font style="font-size:16px" 
+              color="#000000" 
+              face="Arial">A short summary of the issue
+        </font>
+      </div>
+	    <div id="wb_Text2" 
+           style="position:absolute;left:0px;top:142px;width:114px;height:18px;z-index:2;" align="left">
+	      <font style="font-size:16px" 
+              color="#000000" 
+              face="Arial">Expected result
+        </font>
+      </div>
+	  <textarea name="TextArea1" 
+              id="TextArea2" 
+              style="position:absolute;left:0px;top:161px;width:298px;height:53px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:3" 
+              rows="2" 
+              cols="33" 
+              title="What should happen">
+    </textarea>
+	    <div id="wb_Text3" 
+           style="position:absolute;left:0px;top:229px;width:197px;height:18px;z-index:4;" align="left">
+	      <font style="font-size:16px" 
+              color="#000000" 
+              face="Arial">How to reproduce
+        </font>
+      </div>
+	  <textarea name="TextArea1" 
+              id="TextArea3" 
+              style="position:absolute;left:0px;top:247px;width:298px;height:53px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:5" 
+              rows="2" 
+              cols="33" 
+              title="Detailed steps on how to reproduce the bug">
+    </textarea>
+	    <div id="wb_Text4" 
+           style="position:absolute;left:0px;top:317px;width:184px;height:18px;z-index:6;" align="left">
+	      <font style="font-size:16px" 
+              color="#000000" 
+              face="Arial">Reproduction rate
+        </font>
+      </div>
+	  <textarea name="TextArea1" 
+              id="TextArea4" 
+              style="position:absolute;left:0px;top:339px;width:298px;height:53px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:7" 
+              rows="2" 
+              cols="33" 
+              title="How often does this happen? 100% of the time? 50%? Just seen once by one player?">
+    </textarea>
+	    <div id="wb_Text5" 
+           style="position:absolute;left:1px;top:401px;width:184px;height:18px;z-index:8;" align="left">
+	      <font style="font-size:16px" 
+              color="#000000" 
+              face="Arial">Links &amp; Comments
+        </font>
+      </div>
+	  <textarea name="TextArea1" 
+              id="TextArea5" 
+              style="position:absolute;left:0px;top:425px;width:298px;height:53px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:9" 
+              rows="2" 
+              cols="33" 
+              title="Link to the Zendesk ticket, or any other relevant information">
+    </textarea>
+	    <div id="wb_Text6" 
+           style="position:absolute;left:74px;top:4px;width:114px;height:27px;z-index:10;" align="left">
+	      <font style="font-size:24px" 
+              color="#000000" 
+              face="Arial">Bugreport
+        </font>
+      </div>
+	<input type="button" 
+         id="Button1" 
+         onclick="showActive('ert');return false;" 
+         name="" 
+         value="Button" 
+         style="position:absolute;left:9px;top:494px;width:96px;height:25px;background-color:#C3C3C3;font-family:Arial;font-size:13px;z-index:11">

@@ -1,0 +1,137 @@
+[
+
+    {
+        "story": "initial story",
+        "image": "",
+        "text": "Can the player log in the game...</strong>",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "01",
+        "image": "",
+        "text":  "does the player want to remove the Application",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+   
+    {
+        "story": "02",
+        "image": "",
+        "text":  "is the recovery code available",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "011",
+        "image": "",
+        "text":  "3",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "012",
+        "image": "",
+        "text":  "4",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "021",
+        "image": "",
+        "text":  "5",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "022",
+        "image": "",
+        "text":  "6",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0111",
+        "image": "",
+        "text":  "7",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0112",
+        "image": "",
+        "text":  "8",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0121",
+        "image": "",
+        "text":  "9",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0122",
+        "image": "",
+        "text":  "10",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0211",
+        "image": "",
+        "text":  "11",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0212",
+        "image": "",
+        "text":  "12",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0221",
+        "image": "",
+        "text":  "13",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    },
+
+    {
+        "story": "0222",
+        "image": "",
+        "text":  "14",
+        "button1": "Yes",
+        "button2": "No",
+        "display": ""
+    }
+]
